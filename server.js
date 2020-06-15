@@ -24,4 +24,4 @@ if (process.env.NODE_ENV === "production") {
   );
 }
 
-app.listen(process.env.PORT || 5000, () => console.log(`Server is On`));
+app.listen(5000, () => console.log(`Server is On`));
