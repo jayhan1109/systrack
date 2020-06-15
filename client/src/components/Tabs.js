@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "./Tabs.scss";
 
-const Tabs = ({ getCPU, getGraphic }) => {
+const Tabs = ({ getCPU, getGraphic, getMemory, getDisk }) => {
   return (
     <Fragment>
       <Container>
@@ -23,17 +23,19 @@ const Tabs = ({ getCPU, getGraphic }) => {
           >
             Graphic
           </Button>
-          <Button className="btnWidth ml-2 mr-2 px-0 mt-1" variant="secondary">
-            Temp
+          <Button
+            className="btnWidth ml-2 mr-2 px-0 mt-1"
+            variant="secondary"
+            onClick={() => getMemory()}
+          >
+            Memory
           </Button>
-          <Button className="btnWidth ml-2 mr-2 px-0 mt-1" variant="secondary">
-            Temp
-          </Button>
-          <Button className="btnWidth ml-2 mr-2 px-0 mt-1" variant="secondary">
-            Temp
-          </Button>
-          <Button className="btnWidth ml-2 mr-2 px-0 mt-1" variant="secondary">
-            Temp
+          <Button
+            className="btnWidth ml-2 mr-2 px-0 mt-1"
+            variant="secondary"
+            onClick={() => getDisk()}
+          >
+            Disk
           </Button>
         </Row>
       </Container>

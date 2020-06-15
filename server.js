@@ -16,6 +16,21 @@ app.get("/graphic", async (req, res) => {
   res.json(data);
 });
 
+app.get("/memory", async (req, res) => {
+  const data = await si.mem();
+  res.json(data);
+});
+
+app.get("/battery", async (req, res) => {
+  const data = await si.battery();
+  res.json(data);
+});
+
+app.get("/disk", async (req, res) => {
+  const data = await si.diskLayout();
+  res.json(data);
+});
+
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
